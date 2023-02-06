@@ -10,9 +10,7 @@ pipline{
          steps{
            sh "yum install httpd -y"
            sh "service httpd start"
-           echo "hello world" >>/var/www/html/
-           chmod -R 777 /var/www/html/index.html
-           
+           sh "yum update -y"
 
                }
 
