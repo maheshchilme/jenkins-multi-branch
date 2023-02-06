@@ -1,7 +1,7 @@
 pipline{
     agent{
        label{
-           label "qa"
+           label "built-in"
        }
      }
      
