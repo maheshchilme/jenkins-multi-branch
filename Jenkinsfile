@@ -1,7 +1,7 @@
-pipline{
+pipeline{
     agent{
        label{
-           label "qa"
+           label "built-in"
        }
      }
      
@@ -10,10 +10,9 @@ pipline{
          steps{
            sh "yum install httpd -y"
            sh "service httpd start"
-           echo "hello world" >>/var/www/html/index.html
-           chmod -R 777 /var/www/html/index.html
-           
-
+           sh "yum update -y"
+           sh "echo 'hello world' /var/www/html/index.html"
+           sh "chmod -R 777 /var/www/html/index.html"
                }
 
           }
